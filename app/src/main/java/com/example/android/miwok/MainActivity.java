@@ -20,6 +20,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Find the View that shows the Numbers category
-        TextView numbers = (TextView) findViewById(R.id.numbers);
+        final TextView numbers = (TextView) findViewById(R.id.numbers);
 
         //Set a clicklistener on that View
         numbers.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
                 // Create a new intent to open the {@link NumbersActivity}
                 Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+
+                Toast.makeText(MainActivity.this, "test", Toast.LENGTH_SHORT);
 
                 // Start the new activity
                 startActivity(numbersIntent);
