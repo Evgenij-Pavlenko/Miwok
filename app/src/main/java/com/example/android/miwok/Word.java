@@ -112,4 +112,8 @@ public class Word {
     public boolean hasImage() {
         return mImageResourceId != NO_IMAGE_PROVIDED;
     }
+
+    public int getAudioResourceId() {
+        return mAudioResourceId;
+    }
 }
